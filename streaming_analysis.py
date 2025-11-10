@@ -26,3 +26,23 @@ songs_by_day = df['timestamp'].dt.date.value_counts().sort_index()
 # Songs listened by month
 songs_by_month = df['timestamp'].dt.to_period('M').value_counts().sort_index()
 
+# Print summary
+print("Your Year in Music Summary:")
+print(f"Average Completion Rate: {average_completion:.2f}")
+print(f"Total Listening Time (seconds): {total_listening_time}")
+
+print("\nTop Artists:")
+print(top_artists)
+
+print("\nTop Songs:")
+print(top_songs)
+
+print("\nTop Genres:")
+print(top_genres)
+
+print("\nSongs Listened by Day:")
+print(songs_by_day)
+
+print("\nSongs Listened by Month:")
+print(songs_by_month)
+
