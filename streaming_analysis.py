@@ -46,3 +46,29 @@ print(songs_by_day)
 print("\nSongs Listened by Month:")
 print(songs_by_month)
 
+# Visualization: Line graph of songs by day
+plt.figure(figsize=(10, 5))
+songs_by_day.plot(kind='line')
+plt.title('Songs Listened by Day')
+plt.xlabel('Date')
+plt.ylabel('Number of Songs')
+plt.tight_layout()
+plt.show()
+
+# Visualization: Bar chart of top artists
+plt.figure(figsize=(8, 5))
+top_artists.plot(kind='bar', color='skyblue')
+plt.title('Top 5 Most Listened Artists')
+plt.xlabel('Artist')
+plt.ylabel('Play Count')
+plt.tight_layout()
+plt.show()
+
+# Visualization: Histogram of completion rates
+plt.figure(figsize=(8, 5))
+plt.hist(df['completion_rate'], bins=10, color='salmon', edgecolor='black')
+plt.title('Distribution of Completion Rates')
+plt.xlabel('Completion Rate')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.show()
